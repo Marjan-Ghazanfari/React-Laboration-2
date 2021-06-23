@@ -19,7 +19,9 @@ const Product = ({product, togglePurchased, removeProduct, changeProduct}) => {
 
     const deleteProduct = () => {
         if(product.purchased)
-          removeProduct(product.id)
+            removeProduct(product.id)
+        else
+            alert('It needs to mark before deleting')
     }
 
     return (
