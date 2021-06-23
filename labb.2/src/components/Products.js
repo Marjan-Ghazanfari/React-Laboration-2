@@ -1,11 +1,19 @@
-import React from 'react';
+import { useEffect, useState } from 'react';
 import Product from './Product';
 
 const Products = ({products, togglePurchased, removeProduct, changeProduct}) => {
+    const [sortedProducts, setSortedProducts] = useState([]);
+
+    useEffect(() => {
+        setSortedProducts(products.sort((a, b) => {
+            return a.purchased === b.purchased ? 0 : a.purchased ? 1 : -1
+        }));
+    }, [products]);
+
     return (
         <div className="mt-4 text-center d-flex flex-wrap">
             {
-                products.map(product => (
+                sortedProducts.map(product => (
                     <Product product={product} key={product.id} togglePurchased={togglePurchased} removeProduct={removeProduct} changeProduct={changeProduct} />
                 ))
             }

@@ -32,7 +32,7 @@ const Product = ({product, togglePurchased, removeProduct, changeProduct}) => {
                         <h5 className={`card-title ${product.purchased ? 'purchased' : ''}`} onClick={toggle}>{ product.name }
                         {
                             product.purchased
-                            ? <i class="fas fa-check ms-1"></i>
+                            ? <i className="fas fa-check ms-1"></i>
                             : ''
                         }
                         </h5>

@@ -24,7 +24,7 @@ const AddProduct = ({addProduct}) => {
                 <div className="form-floating col-8">
                     <input id="productName" className="form-control" placeholder="Enter Product Name..." type="text" ref={inputRef} value={name} onChange={e => setName(e.target.value)} />
                     <small className="text-danger">{error}</small>
-                    <label for="productName">Enter Product Name...</label>
+                    <label htmlFor="productName">Enter Product Name...</label>
                 </div>
                 <div>
                     <input type="submit" className="btn btn-success p-3" value="ADD PRODUCT" />

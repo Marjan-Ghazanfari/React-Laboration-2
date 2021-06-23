@@ -14,23 +14,10 @@ function App() {
     {id: uuidv4(), name: 'Product 3', purchased: false}
   ]);
 
-  // const togglePurchased = id => {
-  //   setProducts(prevProducts => {
-  //     products.map(product => {
-  //       if(product.id === id) {
-  //         product.purchased = !product.purchased
-  //         return [...prevProducts, product]
-  //       }
-  //       return [product, ...prevProducts]
-  //   })
-  // })
-  // }
-
   const togglePurchased = id => {
     let newProducts = products.map(product => {
       if(product.id === id) {
         product.purchased = !product.purchased
-        // return [...products, product]
         return product
       }
       return product
